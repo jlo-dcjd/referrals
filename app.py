@@ -52,6 +52,7 @@ def det_perc_df_fy():
     df_perc = df_perc.round(2)
     return df_perc
 
+st.header('Referrals')
 
 year1 = st.selectbox('Select Year 1', year_list, index=1) 
 year2 = st.selectbox('Select Year 2', year_list, index=2) 

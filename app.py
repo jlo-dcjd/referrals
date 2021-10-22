@@ -13,7 +13,7 @@ year_list = ['2018', '2019', '2020', '2021']
 def percentage_change(col1,col2):
     return ((col2 - col1) / col1)
 
-refs_2016 = pd.read_csv(r'C:\Users\Juan.Lomeli\OneDrive - Dallas County\Documents\streamlit-app\multipage-app\apps\data\Referrals_2016_2021.csv',
+refs_2016 = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/referrals/main/Referrals_2016_2021.csv',
     index_col='Referral_Date')
 
 formal_refs = refs_2016['Formal'][24:] + refs_2016['Paper_Formalized'][24:] # start jan 2017
@@ -21,7 +21,7 @@ formal_refs = refs_2016['Formal'][24:] + refs_2016['Paper_Formalized'][24:] # st
 col_names = ['Pid', 'Sex', 'Race', 'Ref_Date', 'Paper_Date', 'Referral_Date', 'Stat', 'Category', 'Offense',
         'General_Category', 'OffenseDescription', 'Referral_Type']
 
-refs = pd.read_csv(r'C:\Users\Juan.Lomeli\OneDrive - Dallas County\Documents\streamlit-app\multipage-app\apps\data\Referrals 2010-2021.csv', names=col_names, skiprows=1)
+refs = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/referrals/main/Referrals%202010-2021.csv', names=col_names, skiprows=1)
 refs['Referral_Date'] = pd.to_datetime(refs['Referral_Date'])
 
 def det_perc_df():
